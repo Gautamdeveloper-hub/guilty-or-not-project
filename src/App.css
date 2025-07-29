@@ -82,7 +82,7 @@ body {
   outline: none;
   border-color: #2eb8b0;
   box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.3);
-}
+} */
 
 /* === Button === */
 .button {
@@ -100,7 +100,7 @@ body {
 
 .button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(231, 46, 46, 0.2);
 }
 
 /* === Demo Card/Section === */
@@ -118,11 +118,11 @@ body {
 }
 
 .demo-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(236, 228, 228, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(108, 151, 120, 0.2);
   margin-top: 1rem;
 }
 .red {
@@ -165,20 +165,7 @@ body {
   font-size: 0.9rem;
   color: #ccc;
 }
-/* 
-.comment-time {
-  font-size: 0.8rem;
-  color: #aaa;
-} */
-/* 
-.stance-tag {
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  display: inline-block;
-} */
+
 
 .defense {
   background-color: #1a73e8;
@@ -188,3 +175,81 @@ body {
   background-color: #d93025;
 }
 
+
+.vote-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #121640;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+  width: 48%;
+}
+
+.not-guilty-btn {
+  background-color: #2563eb; /* Blue */
+}
+
+.guilty-btn {
+  background-color: #b91c1c; /* Red */
+}
+
+.not-guilty-btn:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.05);
+}
+
+.guilty-btn:hover {
+  background-color: #991b1b;
+  transform: scale(1.05);
+}
+
+.result-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+
+}
+
+.result-bar span{
+  color: whitesmoke;
+}
+
+.bar {
+  flex: 1;
+  height: 20px;
+  background-color: #4040c9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.guilty-fill {
+  height: 100%;
+  background-color: #ef4444;
+  transition: width 0s ease-in-out;
+}
+
+.not-guilty-fill {
+  height: 100%;
+  background-color: #3b82f6;
+  transition: width 0s ease-in-out;
+ 
+} 
