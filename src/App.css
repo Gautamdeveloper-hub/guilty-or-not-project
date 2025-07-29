@@ -1,0 +1,190 @@
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #4ecdc4;
+  color: white;
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #167c83;
+  color: white;
+  border-radius: 10px;
+}
+
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  background: rgba(101, 194, 121, 0.1);
+  color: rgb(124, 76, 76);
+  text-decoration: none;
+  border: 1px solid #20b4b4;
+  border-radius: 10px;
+  transition: all 0.6s ease;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background: rgba(17, 116, 61, 0.2);
+}
+
+
+.explanation-box {
+  background-color: #1a7174;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 1rem 0 2rem;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+.explanation-box h4 {
+  margin-top: 0;
+  color: #fdd835;
+}
+
+.explanation-box p {
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.explanation-box input[type="radio"] {
+  margin-right: 0.5rem; 
+   background: #4fc3f7; 
+}
+
+.explanation-box label {
+  font-size: 17px;
+  color: whitesmoke;
+  margin-right: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+.styled-input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  border: 2px solid #4ecdc4;
+  background: rgba(255, 255, 255,  0.9);
+  color: #333;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.styled-input:focus {
+  outline: none;
+  border-color: #2eb8b0;
+  box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.3);
+}
+
+/* === Button === */
+.button {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* === Demo Card/Section === */
+.demo-section {
+
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 1024px) {
+  .demo-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.demo-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 1rem;
+}
+.red {
+  background-color: #ff4d4d; /* soft red */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.red:hover {
+  background-color: #cc0000;
+}
+
+.green {
+  background-color: #4CAF50; /* soft green */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.green:hover {
+  background-color: #2e8b57;
+}
+
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+/* 
+.comment-time {
+  font-size: 0.8rem;
+  color: #aaa;
+} */
+/* 
+.stance-tag {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+} */
+
+.defense {
+  background-color: #1a73e8;
+}
+
+.offense {
+  background-color: #d93025;
+}
+
