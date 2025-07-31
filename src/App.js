@@ -1,13 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './Service/App.css';
 
 
 /* pages  import one by one */
-import Box1 from './components/pages/Box1';
-import Box2 from './components/pages/Box2';
-import Box3 from './components/pages/Box3';
-import Box4 from './components/pages/Box4';
+import Box1 from './components/Box1';
+import Box2 from './components/Box2';
+import Box3 from './components/Box3';
+import Box4 from './components/Box4';
 
 
 
@@ -82,13 +82,12 @@ function Demopage() {
   }
   function App( ) {
     return(
-<Router>
 <div className="voting-App">
     <Header />
         <main>
           <Routes>
-            <Route path=" /" element ={<Demopage/>}/>
-            <Route path="Box1/  " element={<Box1 />} />
+            <Route path="/" element ={<Demopage/>}/>
+            <Route path="Box1/" element={<Box1 />} />
             <Route path="Box2/" element={<Box2 />} />
             <Route path="Box3/" element={<Box3/>} />
             <Route path="Box4/" element={<Box4/>} />
@@ -96,7 +95,6 @@ function Demopage() {
         </main>
         <Footer />
 </div>
-</Router>
 
     );
 }

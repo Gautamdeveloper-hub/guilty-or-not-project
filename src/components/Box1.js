@@ -178,7 +178,7 @@ function Box1() {
     );
 }
 
-export default <Box1></Box1>;
+export default Box1;
 
 
 
