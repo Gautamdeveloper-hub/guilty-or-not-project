@@ -1,194 +1,104 @@
-
-// import React, { useState } from "react";
-// import { motion } from "framer-motion";
-// import "./App.css";
-
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './Service/App.css';
 
 
-// function CommentCard({ user, submittedValue, time, comment }) {
-//     const isDefense = submittedValue.toLowerCase() === 'defense';
-
-//     return (
-//         <div className="component">
-//             <motion.div
-//                 initial={{ opacity: 0, y: 20 }}
-//                 animate={{ opacity: 1, y: 0 }}
-//                 style={{
-//                     background: "rgba(201, 15, 15, 0.3)",
-//                     padding: "1rem",
-//                     borderRadius: "8px",
-//                     marginTop: "1rem",
-//                     color: "white",
-//                     borderLeft: `6px solid ${isDefense ? '#4285F4' : '#EA4335'}`,
-//                 }}
-//             >
-//                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-//                     <span style={{ fontWeight: 'bold' }}>{user}</span>
-//                     <span style={{ fontSize: '0.85rem', color: '#ccc' }}>{time}</span>
-//                 </div>
-//                 <div style={{
-//                     backgroundColor: isDefense ? '#1a73e8' : '#d93025',
-//                     color: 'white',
-//                     padding: '2px 10px',
-//                     display: 'inline-block',
-//                     borderRadius: '6px',
-//                     fontSize: '0.8rem',
-//                     fontWeight: 'bold',
-//                     marginBottom: '0.5rem',
-//                 }}>
-//                     {isDefense ? 'DEFENSE' : 'OFFENSE'}
-//                 </div>
-//                 <p style={{ marginTop: '0.5rem', lineHeight: '1.4' }}>{comment}</p>
-//             </motion.div>
-//         </div>
-//     );
-// }
-
-
-// function App() {
-//     const [value, setValue] = useState("");
-//     // const [comment, setComment] = useState("");
-//     const [stance, setStance] = useState('');
-//     const [SubmittedComments, setSubmittedComments] = useState([]);
-
-//     const handleSubmit = (e) => {
-//         e.preventDefault();
-
-//         if (value && stance) {
-//             const newComment = {
-
-//                 user: "Anonymous",      //  call name 
-//                 comment: value,
-//                 stance: stance,
-//                 time: new Date().toLocaleTimeString() // call time
-//             };
-
-//             setSubmittedComments([...SubmittedComments, newComment]);
-//             setValue('');
-//             setStance('');
-//         }
-//     };
-
-//     return (
-//         <div className="container">
-//             <a href="/" className="back-button">← Back to Home</a>
-
-//             <div className="explanation-box">
-//                 <h4>Is Group Work Just Free Labor?</h4>
-//                 <p>
-//                     Group Projects are exhausting and most of the time, one person does all
-//                     work while everyone else slacks.
-//                 </p>
-
-//                 <form>
-//                     <input
-//                         type="radio"
-//                         id="defense"
-//                         value="defense"
-//                         name="stance"
-//                         checked={stance === "defense"} 
-//                         onChange={(e) => setStance(e.target.value)}
-//                     />
-//                     <label htmlFor="defense">Defense</label>
+/* pages  import one by one */
+import Box1 from './components/pages/Box1';
+import Box2 from './components/pages/Box2';
+import Box3 from './components/pages/Box3';
+import Box4 from './components/pages/Box4';
 
 
 
+import Header from'./layout/Header';
+import Footer from'./layout/Footer'; 
+import NavCard from './components/NavCard'; // Import NavCard component
 
-//                     <input
-//                         type="radio"
-//                         id="offense"
-//                         value="offense"
-//                         name="stance"
-//                         checked={stance === "offense"} 
-//                         onChange={(e) => setStance(e.target.value)}
-//                     />
-//                     <label htmlFor="offense">Offense</label>
-//                   <div>
-//                     <button className="red"> not guilty</button>
-//                      <button className="green"> Guilty</button>
-//                 </div>
-
-//                 </form>
+// import { path, title } from 'framer-motion/client';
 
 
 
-//             </div> 
-//               <div className="demo-section">
-//                 <motion.div className="demo-card"
-//                     initial={{ opacity: 0, x: -50 }}
-//                     animate={{ opacity: 1, x: 0 }}
-//                     transition={{ duration: 0.6 }}
-//                 >
+function Demopage() {
+   const modules=[
+    {
+
+      path:'Box1/',
+      title:'1. is Group Work is just free laber',
+      description:'Group project are exhusting and most  of the time,one person does all the work while everyone else slacks off.',
+       emo:'❤️🤣😘🔥😂 +6'
+    },
+ {
+
+      path:'Box2/',
+      title:'2. Monarchy Or Democracy ',
+      description:' More than 10,0000 peoples were on road for protesting against democracy and demanding for a king,was those people right or wrong.',
+      emo:'❤️🤣😘🔥😂 +6'
+    },
+   
+   {
+    path:'Box3/',
+    title:'3.Was Diddy Guilty',
+    description:'Diddy was found with more than 1500+ baby oil in has mansion. he faced serious alligations pf children trafficing, rapes etc.',
+     emo:'❤️🤑😭😂🔥 +8'
+  },
+ {
+    path:'Box4/',
+    title:'4.Is ketchup a smoothie?',
+    description:'Ketchup is made of blended tomatoes, which are fruit, so technically it qualifies as smoothie.',
+    emo:'❤️🤣😘😊😂🔥 +6'
+  },
+
+    
+  ];
+
+  return(
+    <> 
+    <Header>
+
+    </Header>
 
 
-//             <form onSubmit={handleSubmit} style={{ marginTop: "1rem" }}>
-//                 <label>Write your argument</label>
-//                 <input
-//                     className="styled-input"
-//                     type="text"
-//                     value={value}
-//                     onChange={(e) => setValue(e.target.value)}
-//                     placeholder="type your argument here..."
-//                 />
-//                 <button className="button" type="submit">Post as defender</button>
-//             </form>
-//   </motion.div>
-//             </div>  
-//             {/* Render submitted comments */}
-//             {SubmittedComments.map((entry, index) => (
-//                 <CommentCard
-//                     key={index}
-//                     user={entry.user}
-//                     submittedValue={entry.stance}
-//                     comment={entry.comment}
-//                     time={entry.time} // store time and show result
-//                 />
-//             ))}
-//         </div>
+      <div className="navigation">
+        {modules.map((module, index) => (
+          <NavCard
+            key={module.path}
+            to={module.path}
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <h3>{module.title}</h3>
+            <p>{module.description}</p>
+          </NavCard>
+        ))}
+      </div>
 
-//     );
-// }
+    </>
 
-// export default App;
+  );
+  }
+  function App( ) {
+    return(
+<Router>
+<div className="voting-App">
+    <Header />
+        <main>
+          <Routes>
+            <Route path=" /" element ={<Demopage/>}/>
+            <Route path="Box1/  " element={<Box1 />} />
+            <Route path="Box2/" element={<Box2 />} />
+            <Route path="Box3/" element={<Box3/>} />
+            <Route path="Box4/" element={<Box4/>} />
+          </Routes>
+        </main>
+        <Footer />
+</div>
+</Router>
 
-import React, { useState } from 'react';
-import './App.css'; // Make sure to create this file
-
-function App() {
-    const [guiltyVotes, setGuiltyVotes] = useState(0);
-    const [notGuiltyVotes, setNotGuiltyVotes] = useState(0);
-
-    const totalVotes = guiltyVotes + notGuiltyVotes;
-    const guiltyPercent = totalVotes ? Math.round((guiltyVotes / totalVotes) * 100) : 0;
-    const notGuiltyPercent = totalVotes ? Math.round((notGuiltyVotes / totalVotes) * 100) : 0;
-
-    return (
-        <div className="vote-container">
-            <div className="button-group">
-                <button className="not-guilty-btn" onClick={() => setNotGuiltyVotes(notGuiltyVotes + 1)}>NOT GUILTY</button>
-                <button className="guilty-btn" onClick={() => setGuiltyVotes(guiltyVotes + 1)}>GUILTY</button>
-            </div>
-
-            <div className="result-bar">
-                <span>Guilty</span>
-                <div className="bar">
-                    <div className="guilty-fill" style={{ width: `${guiltyPercent}%` }}></div>
-                </div>
-                <span>{guiltyPercent}%</span>
-            </div>
-
-            <div className="result-bar">
-                <span>Not Guilty</span>
-                <div className="bar">
-                    <div className="not-guilty-fill" style={{ width: `${notGuiltyPercent}%` }}></div>
-                </div>
-                <span>{notGuiltyPercent}%</span>
-            </div>
-        </div>
     );
 }
-
 export default App;
-
-
 
